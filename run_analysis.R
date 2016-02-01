@@ -66,7 +66,7 @@ names(df) <- gsub("Mag", "Magnitude", names(df))
 #Creates a 2nd dataset that is the average of each variable for each subject (Task #5)
 
 df2 <- aggregate(. ~Subject + Activity,df,mean)
-write.table(df2, file="tidydata.txt")
+write.table(df2, file="tidydata.txt",row.names=FALSE)
 
 
 
